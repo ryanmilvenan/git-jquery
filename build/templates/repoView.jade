@@ -1,1 +1,17 @@
 h5= item.full_name
+h6!= '<b>Description: </b>' + item.description
+h6!= '<b>Default Branch: </b>' + item.default_branch
+- var created = new Date(item.created_at)
+h6!= '<b>Date Created: </b>' + created
+- var lastUpated = new Date(item.updated_at)
+h6!= '<b>Last Updated: </b>' + lastUpated
+h6!= '<b>Forks: </b>' + item.forks
+h6!= '<b>Open Issues: </b>' + item.open_issues
+h6!= '<b>Private: </b>' + item.private
+h6!= '<b>Subscribers: </b>' + item.subscribers_count
+h6!= '<b>Watchers: </b>' + item.watchers_count
+h6!= '<b>Stargazers: </b>' + item.stargazers_count
+h6!= '<b>Owner: </b>' + item.owner.login
+h6!= '<b>Homepage: </b>' + item.homepage
+h6!= '<b>Language: </b>' + item.language
+h6!= '<b>Clone URL: </b>' + item.ssh_url
