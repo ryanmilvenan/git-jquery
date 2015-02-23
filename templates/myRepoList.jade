@@ -1,0 +1,24 @@
+each item in items
+    div.row 
+        div.six.columns
+            a(href="#", onClick='myRepo("' + item.full_name + '")')
+                = item.full_name
+    div.row
+        div.four.columns
+            = item.open_issues
+            |  issues
+        div.four.columns
+            = item.forks
+            |  forks
+        div.four.columns
+            = item.watchers_count
+            |  watchers
+    div.row
+        - var created_at = new Date(item.created_at)
+        - var date = created_at.toLocaleDateString()
+        div.six.columns
+            = 'Created: ' +date
+        - var updated_at = new Date(item.updated_at)
+        - var update = updated_at.toLocaleDateString()
+        div.six.columns
+            = 'Updated: ' +update
