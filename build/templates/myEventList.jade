@@ -1,0 +1,16 @@
+each item in items
+    div.row 
+        div.twelve.columns
+            h6(style='font-weight:bold; margin-bottom:-0.1em;')= item.repo.name
+    div.row
+        div.six.columns
+            img(src=item.actor.avatar_url, style='height:30px; width:30px;')
+        div.six.columns
+            = 'User: ' + item.actor.login
+    div.row
+        div.six.columns
+            = item.type
+        - var created_at = new Date(item.created_at)
+        - var date = created_at.toLocaleDateString()
+        div.six.columns
+            = 'Created: ' + date
