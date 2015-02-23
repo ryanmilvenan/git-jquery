@@ -1,5 +1,5 @@
 function myEvents(){
-    $("#details").empty()
+    $("#details").html()
     // display a list of events belonging to me in #list
     // e.g., https://api.github.com/users/doubleshow/events
     $.get("https://api.github.com/users/doubleshow/events", github, function(data) {
